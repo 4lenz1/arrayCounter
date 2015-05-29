@@ -1,8 +1,9 @@
 #include <counter.h>
 
-int * counter(int **array , int col_size  , int row_size , int* counter_array){
+void counter(int **array , int col_size  , int row_size , int* counter_array){
 
     // initial array first
+    //memset(array , 0 , col_size * sizeof(*array));
     for(int index = 0 ; index < col_size ; index ++)
         *(counter_array + index) = 0 ;
 
@@ -16,6 +17,5 @@ int * counter(int **array , int col_size  , int row_size , int* counter_array){
             }  // end if
         }// end inner for
     } // end outer for
-    return counter_array;
 }
 
